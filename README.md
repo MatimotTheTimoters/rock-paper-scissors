@@ -8,8 +8,8 @@
     - [x] script.js
 
 2. Initialize index.html
-    - [ ] Boilerplate
-    - [ ] Link to script.js
+    - [x] Boilerplate
+    - [x] Link to script.js
 
 3. Create getComputerChoice function
     - [ ] Use Math.random function to get a value between 0 and 1
