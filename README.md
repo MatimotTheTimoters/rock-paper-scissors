@@ -25,16 +25,16 @@
         - [x] playRound
 
 4. Create getComputerChoice function
-    - [ ] Use Math.random function to get a value between 0 and 1
-    - [ ] If value is 0-.33, return rock
-    - [ ] If value is .34-.66, return paper
-    - [ ] If value is .67-1, return scissors
-    - [ ] Assign return value to computerChoice
+    - [x] Use Math.random function to get a value between 0 and 1
+    - [x] If value is 0-32, return rock
+    - [x] If value is 33-66, return paper
+    - [x] If value is 67-100, return scissors
+    - [x] Assign return value to computerChoice
 
 5. Create getHumanChoice function
-    - [ ] Use prompt function to get choice
-    - [ ] Use toLowerCase function to make case-insensitive
-    - [ ] Assign return value to humanChoice
+    - [x] Use prompt function to get choice
+    - [x] Use toLowerCase function to make case-insensitive
+    - [x] Assign return value to humanChoice
 
 6. Create getRoundCount function
     - [ ] Use prompt function to get choice
