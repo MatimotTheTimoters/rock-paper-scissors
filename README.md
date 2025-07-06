@@ -37,12 +37,12 @@
     - [x] Assign return value to humanChoice
 
 6. Create getRoundCount function
-    - [ ] Use prompt function to get choice
-    - [ ] Assign return value to roundCount
+    - [x] Use prompt function to get choice
+    - [x] Assign return value to roundCount
 
 7. Create playRound function
-    - [ ] Have computerChoice, humanChoice, roundCount as parameters
-    - [ ] After round, increment scores, roundCount and print result to console
+    - [x] Have computerChoice, humanChoice, roundCount as parameters
+    - [x] After round, increment scores, roundCount and print result to console
 
 8. Create calcScore function
     - [ ] Check if humanScore > computerScore, print result

@@ -15,20 +15,56 @@ function getComputerChoice(min=1, max=100) {
     }
 }
 
-function getHumanChoice(currentRound, maxRound) {
+function getHumanChoice() {
     const humanChoice = prompt(`Choose from either rock, paper or scissors: `).toLowerCase();
     return humanChoice;
 }
 
 function getRoundCount() {
     const roundCount = Number(prompt("Input maximum amount of rounds: "));
-    return rountCount;
+    return roundCount;
 }
 
-function playRound() {
+function playRound(computerChoice, humanChoice, roundCount) {
+    for (let currentRound = 1; currentRound <= roundCount; currentRound++) {
+        // Prompt choices
+        console.log(`Round ${currentRound}/${roundCount}: Choice phase`);
+        computerChoice = getComputerChoice();
+        humanChoice = getHumanChoice();
+        
+        // Check if draw
+        if (humanChoice === "rock" && computerChoice === "rock" ||
+            humanChoice === "paper" && computerChoice === "paper" ||
+            humanChoice === "scissors" && computerChoice === "scissors"
+            ) {
+                console.log(`Round ${currentRound}/${roundCount}: Draw`)
+                continue;
+            }
+
+        // Check if computer wins
+        if (humanChoice === "rock" && computerChoice === "paper" ||
+            humanChoice === "paper" && computerChoice === "scissors" ||
+            humanChoice === "scissors" && computerChoice === "rock"
+            ) {
+                console.log(`Round ${currentRound}/${roundCount}: Computer wins!`)
+                computerScore++;
+            }
+
+        // Check if human wins
+        if (humanChoice === "rock" && computerChoice === "scissors" ||
+            humanChoice === "paper" && computerChoice === "rock" ||
+            humanChoice === "scissors" && computerChoice === "paper"
+            ) {
+                console.log(`Round ${currentRound}/${roundCount}: Human wins!`)
+                humanScore++;
+            }
+    }
+}
+
+function calcScore() {
 
 }
 
 // Main block
-computerChoice = getComputerChoice();
-humanChoice = getHumanChoice()
+roundCount = getRoundCount();
+playRound();
