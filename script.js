@@ -27,8 +27,14 @@ function getRoundCount() {
 
 function playRound(computerChoice, humanChoice, roundCount) {
     for (let currentRound = 1; currentRound <= roundCount; currentRound++) {
+        // Check if match is over
+        if (currentRound > roundCount) {
+            calcScore(computerScore, humanScore);
+            break;
+        }
+
         // Prompt choices
-        console.log(`Round ${currentRound}/${roundCount}: Choice phase`);
+        console.log(`Round ${currentRound}/${roundCount}: `);
         computerChoice = getComputerChoice();
         humanChoice = getHumanChoice();
         
@@ -61,8 +67,14 @@ function playRound(computerChoice, humanChoice, roundCount) {
     }
 }
 
-function calcScore() {
-
+function calcScore(computerScore, humanScore) {
+    if (humanScore > computerScore) {
+        console.log("Human wins this game!")
+    } else if (computerScore > humanScore) {
+        console.log("Computer wins this game!");
+    } else {
+        console.log("This game is a draw.");
+    }
 }
 
 // Main block

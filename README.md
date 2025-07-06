@@ -45,12 +45,6 @@
     - [x] After round, increment scores, roundCount and print result to console
 
 8. Create calcScore function
-    - [ ] Check if humanScore > computerScore, print result
-    - [ ] Check if humanScore < computerScore, print result
-    - [ ] Check if humanScore === computerScore, print result
-
-8. Create main code block
-    - [ ] Prompt for roundCount
-    - [ ] Get computerChoice
-    - [ ] Prompt for humanChoice
-    - [ ] playRound and calcScore until round > roundCount
+    - [x] Check if humanScore > computerScore, print result
+    - [x] Check if humanScore < computerScore, print result
+    - [x] Check if humanScore === computerScore, print result
