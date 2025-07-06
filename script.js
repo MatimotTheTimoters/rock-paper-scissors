@@ -16,25 +16,19 @@ function getComputerChoice(min=1, max=100) {
 }
 
 function getHumanChoice() {
-    const humanChoice = prompt(`Choose from either rock, paper or scissors: `).toLowerCase();
+    humanChoice = window.prompt(`Choose from either rock, paper or scissors: `, "rock").toLowerCase();
     return humanChoice;
 }
 
 function getRoundCount() {
-    const roundCount = Number(prompt("Input maximum amount of rounds: "));
-    return roundCount;
+    roundCount = window.prompt("How many rounds do you want to play?: ", 3);
+    return Number(roundCount);
 }
 
-function playRound(computerChoice, humanChoice, roundCount) {
+function playRound(roundCount) {
     for (let currentRound = 1; currentRound <= roundCount; currentRound++) {
-        // Check if match is over
-        if (currentRound > roundCount) {
-            calcScore(computerScore, humanScore);
-            break;
-        }
-
         // Prompt choices
-        console.log(`Round ${currentRound}/${roundCount}: `);
+        alert(`Round ${currentRound}/${roundCount}`);
         computerChoice = getComputerChoice();
         humanChoice = getHumanChoice();
         
@@ -43,7 +37,7 @@ function playRound(computerChoice, humanChoice, roundCount) {
             humanChoice === "paper" && computerChoice === "paper" ||
             humanChoice === "scissors" && computerChoice === "scissors"
             ) {
-                console.log(`Round ${currentRound}/${roundCount}: Draw`)
+                alert(`Round ${currentRound}/${roundCount}: Draw`)
                 continue;
             }
 
@@ -52,7 +46,7 @@ function playRound(computerChoice, humanChoice, roundCount) {
             humanChoice === "paper" && computerChoice === "scissors" ||
             humanChoice === "scissors" && computerChoice === "rock"
             ) {
-                console.log(`Round ${currentRound}/${roundCount}: Computer wins!`)
+                alert(`Round ${currentRound}/${roundCount}: Computer wins!`)
                 computerScore++;
             }
 
@@ -61,22 +55,25 @@ function playRound(computerChoice, humanChoice, roundCount) {
             humanChoice === "paper" && computerChoice === "rock" ||
             humanChoice === "scissors" && computerChoice === "paper"
             ) {
-                console.log(`Round ${currentRound}/${roundCount}: Human wins!`)
+                alert(`Round ${currentRound}/${roundCount}: Human wins!`)
                 humanScore++;
             }
     }
+    // Check if match is over
+    calcScore(computerScore, humanScore);
+
 }
 
 function calcScore(computerScore, humanScore) {
     if (humanScore > computerScore) {
-        console.log("Human wins this game!")
+        alert("Human wins this game!")
     } else if (computerScore > humanScore) {
-        console.log("Computer wins this game!");
+        alert("Computer wins this game!");
     } else {
-        console.log("This game is a draw.");
+        alert("This game is a draw.");
     }
 }
 
 // Main block
 roundCount = getRoundCount();
-playRound();
+playRound(roundCount);
