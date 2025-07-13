@@ -7,7 +7,23 @@
 </head>
 <body>
     <form action="submit" method="post">
-        
+        <fieldset class="round-count-container">
+            <legend>Round Count</legend>
+            <label for="round-count-input">Input desired amount of rounds:</label>
+            <input type="text" id="round-count-input" name="round-count-input" value="1">
+            <button type="button">Confirm</button>
+        </fieldset>
+
+        <fieldset class="human-choice-container">
+            <legend>Your action for the current round</legend>
+            <label for="rock">Rock</label>
+            <input type="radio" id="rock" name="human-choice-action" value="rock">
+            <label for="paper">Paper</label>
+            <input type="radio" id="paper" name="human-choice-action" value="paper">
+            <label for="scissors">Scissors</label>
+            <input type="radio" id="scissors" name="human-choice-action" value="scissors"> 
+            <button type="button">Play Round</button>
+        </fieldset>
 
         <script src="script.js"></script>
     </form>
