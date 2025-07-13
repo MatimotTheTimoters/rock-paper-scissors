@@ -66,3 +66,9 @@
     - [x] Align items
     - [x] Justify items
     - [x] Flex
+
+11. Add function to the Confirm button in round-count-container
+    - [x] Add event listener click 
+    - [x] Assign round count value
+    - [x] Make sure that button becomes disabled after click
+    - [] Fix button being disabled at the start

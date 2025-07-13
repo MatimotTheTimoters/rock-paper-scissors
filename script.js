@@ -3,7 +3,23 @@ let computerChoice, humanChoice;
 let currentRound = roundCount = 1;
 let computerScore = humanScore = 0;
 
+let getRoundBtn = document.querySelector("#round-count-confirm-btn")
+
+// Event listeners
+getRoundBtn.addEventListener("click", (e) => {
+    let roundInput = document.querySelector("#round-count-input");
+    roundCount = Number(roundInput.textContent);
+    
+    roundCount.setAttribute("disabled", "");
+    getRoundBtn.setAttribute("disabled", "")
+});
+
 // Functions
+function getRoundCount() {
+    roundCount = window.prompt("How many rounds do you want to play?: ", 3);
+    return Number(roundCount);
+}
+
 function getComputerChoice(min=1, max=100) {
     value = Math.floor(Math.random() * (max - min) + min);
     if (value <= 0 || value >= 32) {
@@ -18,11 +34,6 @@ function getComputerChoice(min=1, max=100) {
 function getHumanChoice() {
     humanChoice = window.prompt(`Choose from either rock, paper or scissors: `, "rock").toLowerCase();
     return humanChoice;
-}
-
-function getRoundCount() {
-    roundCount = window.prompt("How many rounds do you want to play?: ", 3);
-    return Number(roundCount);
 }
 
 function playRound(roundCount) {

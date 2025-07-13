@@ -17,6 +17,11 @@ button {
     height: 20px;
 }
 
+button:disabled {
+    color: wheat;
+    background-color: darkred;
+}
+
 fieldset,
 button {
     border: 2px solid rosybrown;
