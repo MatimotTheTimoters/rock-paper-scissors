@@ -8,31 +8,42 @@
 </head>
 <body>
     <form action="submit" method="post">
-        <fieldset class="round-count-container">
+        <fieldset class="round-count-container flex-col">
             <legend><strong>Round Count</strong></legend>
-            <label for="round-count-input">Input desired amount of rounds:</label>
-            <input type="text" id="round-count-input" name="round-count-input" value="1">
+
+            <div class="flex-row">
+                <label for="round-count-input">Input desired amount of rounds:</label>
+                    <input type="text" id="round-count-input" name="round-count-input" value="1">
+            </div>
+
             <button type="button">Confirm</button>
         </fieldset>
 
-        <div class="choice-container">
-            <fieldset class="computer-choice-container">
+        <div class="choice-container flex-row">
+            <fieldset class="computer-choice-container flex-col">
                 <legend><strong>Computer's choice for the current round</strong></legend>
-                <label for="c-rock">Rock</label>
-                    <input type="radio" id="c-rock" name="computer-choice-action" value="rock" disabled>
-                <label for="c-paper">Paper</label>
-                    <input type="radio" id="c-paper" name="computer-choice-action" value="paper" disabled>
-                <label for="c-scissors">Scissors</label>
-                    <input type="radio" id="c-scissors" name="computer-choice-action" value="scissors" disabled>
+                
+                <div class="computer-choices">
+                    <label for="c-rock">Rock</label>
+                        <input type="radio" id="c-rock" name="computer-choice-action" value="rock" disabled>
+                    <label for="c-paper">Paper</label>
+                        <input type="radio" id="c-paper" name="computer-choice-action" value="paper" disabled>
+                    <label for="c-scissors">Scissors</label>
+                        <input type="radio" id="c-scissors" name="computer-choice-action" value="scissors" disabled>
+                </div>
             </fieldset>
-            <fieldset class="human-choice-container">
+            <fieldset class="human-choice-container flex-col">
                 <legend><strong>Your action for the current round</strong></legend>
-                <label for="rock">Rock</label>
-                    <input type="radio" id="rock" name="human-choice-action" value="rock">
-                <label for="paper">Paper</label>
-                    <input type="radio" id="paper" name="human-choice-action" value="paper">
-                <label for="scissors">Scissors</label>
-                    <input type="radio" id="scissors" name="human-choice-action" value="scissors">
+
+                <div class="human-choices">
+                    <label for="rock">Rock</label>
+                        <input type="radio" id="rock" name="human-choice-action" value="rock">
+                    <label for="paper">Paper</label>
+                        <input type="radio" id="paper" name="human-choice-action" value="paper">
+                    <label for="scissors">Scissors</label>
+                        <input type="radio" id="scissors" name="human-choice-action" value="scissors">
+                </div>
+
                 <button type="button">Play Round</button>
             </fieldset>
         </div>
@@ -40,14 +51,26 @@
         <fieldset class="results-container flex-col">
             <legend><strong>Results</strong></legend>
 
-            <label for="human-score">Your Score:</label>
-                <input type="text" id="human-score" name="human-score" disabled>
-            <label for="computer-score">Computer Score:</label>
-                <input type="text" id="computer-score" name="computer-score" disabled>
-            <label for="round-result">Round Result:</label>
-                <input type="text" id="round-result" name="round-result" disabled>
-            <label for="game-result">Game Result:</label>
-                <input type="text" id="game-result" name="game-result" disabled>
+            <div class="result flex-row">
+                <label for="human-score">Your Score:</label>
+                    <input type="text" id="human-score" name="human-score" disabled>
+            </div>
+
+            <div class="result flex-row">
+                <label for="computer-score">Computer Score:</label>
+                    <input type="text" id="computer-score" name="computer-score" disabled>
+            </div>
+
+            <div class="result flex-row">
+                <label for="round-result">Round Result:</label>
+                    <input type="text" id="round-result" name="round-result" disabled>
+            </div>
+
+            <div class="result flex-row">
+                <label for="game-result">Game Result:</label>
+                    <input type="text" id="game-result" name="game-result" disabled>
+            </div>
+                
         </fieldset>
 
         <!-- <script src="script.js"></script> -->

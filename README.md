@@ -57,3 +57,12 @@
     - [x] Label for round win
     - [x] Labels for current score
     - [x] Label for game win
+
+10. Add styles to index.html elements
+    - [x] Display flex
+    - [x] FlexFlow column
+    - [x] FlexFlow row
+    - [] Justify content
+    - [] Align items
+    - [] Justify items
+    - [] Flex
