@@ -62,7 +62,7 @@
     - [x] Display flex
     - [x] FlexFlow column
     - [x] FlexFlow row
-    - [] Justify content
-    - [] Align items
-    - [] Justify items
-    - [] Flex
+    - [x] Justify content
+    - [x] Align items
+    - [x] Justify items
+    - [x] Flex

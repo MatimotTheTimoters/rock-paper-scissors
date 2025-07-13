@@ -2,19 +2,51 @@
     box-sizing: border-box;
 }
 
+legend {
+    color: brown;
+}
+
+fieldset {
+    color: peru;
+    background-color: wheat;
+    box-shadow: 5px 2px 2px lightgrey;
+}
+
+button {
+    width: 100px;
+    height: 20px;
+}
+
+fieldset,
+button {
+    border: 2px solid rosybrown;
+    border-radius: 20px;
+}
+
 .flex-row {
     display: flex;
     flex-flow: row;
     gap: 10px;
 }
 
-.flex-col {
+.flex-col,
+body {
     display: flex;
     flex-flow: column;
     gap: 5px;
+    margin: 10px;
 }
 
-button {
-    width: 100px;
-    height: 20px;
+.computer-choice-container,
+.human-choice-container {
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
+
+.round-count-container,
+.choice-container,
+.results-container {
+    justify-content: center;
+    justify-self: center;
 }
