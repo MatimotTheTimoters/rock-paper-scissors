@@ -48,3 +48,12 @@
     - [x] Check if humanScore > computerScore, print result
     - [x] Check if humanScore < computerScore, print result
     - [x] Check if humanScore === computerScore, print result
+
+9. Build DOM structure in index.html:
+    - [] Input element for round count
+    - [] Buttons for human choice
+    - [] Labels for computer choice
+    - [] Play round button
+    - [] Label for round win
+    - [] Labels for current score
+    - [] Label for game win

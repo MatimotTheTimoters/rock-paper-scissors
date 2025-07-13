@@ -46,7 +46,7 @@ function playRound(roundCount) {
             humanChoice === "paper" && computerChoice === "scissors" ||
             humanChoice === "scissors" && computerChoice === "rock"
             ) {
-                alert(`Round ${currentRound}/${roundCount}: Computer wins!`)
+                alert(`Round ${currentRound}/${roundCount}: Computer wins this round!`)
                 computerScore++;
             }
 
@@ -55,7 +55,7 @@ function playRound(roundCount) {
             humanChoice === "paper" && computerChoice === "rock" ||
             humanChoice === "scissors" && computerChoice === "paper"
             ) {
-                alert(`Round ${currentRound}/${roundCount}: Human wins!`)
+                alert(`Round ${currentRound}/${roundCount}: Human wins this round!`)
                 humanScore++;
             }
     }
