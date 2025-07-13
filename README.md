@@ -52,8 +52,8 @@
 9. Build DOM structure in index.html:
     - [x] Input element for round count
     - [x] Buttons for human choice
-    - [] Labels for computer choice
-    - [] Play round button
+    - [x] Labels for computer choice
+    - [x] Play round button
     - [] Label for round win
     - [] Labels for current score
     - [] Label for game win

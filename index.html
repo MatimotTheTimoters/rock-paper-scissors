@@ -8,24 +8,42 @@
 <body>
     <form action="submit" method="post">
         <fieldset class="round-count-container">
-            <legend>Round Count</legend>
+            <legend><strong>Round Count</strong></legend>
             <label for="round-count-input">Input desired amount of rounds:</label>
             <input type="text" id="round-count-input" name="round-count-input" value="1">
             <button type="button">Confirm</button>
         </fieldset>
 
-        <fieldset class="human-choice-container">
-            <legend>Your action for the current round</legend>
-            <label for="rock">Rock</label>
-            <input type="radio" id="rock" name="human-choice-action" value="rock">
-            <label for="paper">Paper</label>
-            <input type="radio" id="paper" name="human-choice-action" value="paper">
-            <label for="scissors">Scissors</label>
-            <input type="radio" id="scissors" name="human-choice-action" value="scissors"> 
-            <button type="button">Play Round</button>
+        <div class="choice-container">
+            <fieldset class="computer-choice-container">
+                <legend><strong>Computer's choice for the current round</strong></legend>
+                <label for="c-rock">Rock</label>
+                    <input type="radio" id="c-rock" name="computer-choice-action" value="rock" disabled>
+                <label for="c-paper">Paper</label>
+                    <input type="radio" id="c-paper" name="computer-choice-action" value="paper" disabled>
+                <label for="c-scissors">Scissors</label>
+                    <input type="radio" id="c-scissors" name="computer-choice-action" value="scissors" disabled>
+            </fieldset>
+            <fieldset class="human-choice-container">
+                <legend><strong>Your action for the current round</strong></legend>
+                <label for="rock">Rock</label>
+                    <input type="radio" id="rock" name="human-choice-action" value="rock">
+                <label for="paper">Paper</label>
+                    <input type="radio" id="paper" name="human-choice-action" value="paper">
+                <label for="scissors">Scissors</label>
+                    <input type="radio" id="scissors" name="human-choice-action" value="scissors">
+                <button type="button">Play Round</button>
+            </fieldset>
+        </div>
+
+        <fieldset class="results-container">
+            <legend><strong>Results</strong></legend>
+
+            <label for="round-result">Round Result:</label>
+            
         </fieldset>
 
-        <script src="script.js"></script>
+        <!-- <script src="script.js"></script> -->
     </form>
 </body>
 </html>
