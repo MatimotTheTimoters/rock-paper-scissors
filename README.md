@@ -54,6 +54,6 @@
     - [x] Buttons for human choice
     - [x] Labels for computer choice
     - [x] Play round button
-    - [] Label for round win
-    - [] Labels for current score
-    - [] Label for game win
+    - [x] Label for round win
+    - [x] Labels for current score
+    - [x] Label for game win

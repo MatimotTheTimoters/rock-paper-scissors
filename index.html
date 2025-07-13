@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <form action="submit" method="post">
@@ -36,11 +37,17 @@
             </fieldset>
         </div>
 
-        <fieldset class="results-container">
+        <fieldset class="results-container flex-col">
             <legend><strong>Results</strong></legend>
 
+            <label for="human-score">Your Score:</label>
+                <input type="text" id="human-score" name="human-score" disabled>
+            <label for="computer-score">Computer Score:</label>
+                <input type="text" id="computer-score" name="computer-score" disabled>
             <label for="round-result">Round Result:</label>
-            
+                <input type="text" id="round-result" name="round-result" disabled>
+            <label for="game-result">Game Result:</label>
+                <input type="text" id="game-result" name="game-result" disabled>
         </fieldset>
 
         <!-- <script src="script.js"></script> -->
