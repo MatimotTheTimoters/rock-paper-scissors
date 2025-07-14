@@ -71,4 +71,16 @@
     - [x] Add event listener click 
     - [x] Assign round count value
     - [x] Make sure that button becomes disabled after click
-    - [] Fix button being disabled at the start
+    - [x] Fix button being disabled at the start
+
+12. Make Play Round button functional
+    - [x] Get radio buttons and play round button from DOM
+    - [x] Add event listener
+    - [x] Check each radio if checked
+    - [x] Assign to human choice
+    - [x] Call calculate results function
+
+13. Alter playRound function
+    - [x] Add fieldset to show current round and round winner
+    - [x] Add round-display-container to styles.css
+    - [x] Update current round display and winner

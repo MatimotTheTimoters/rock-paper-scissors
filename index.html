@@ -19,6 +19,20 @@
             <button type="button" id="round-count-confirm-btn">Confirm</button>
         </fieldset>
 
+        <fieldset class="round-display-container flex-col">
+            <legend><strong>Current Round: </strong></legend>
+            <h2 class="current-round">x/x</h3>
+
+            <div>
+                <label for="round-winner">Round Winner:</label>
+                    <input type="text" id="round-winner" name="round-winner">
+            </div>
+            <div>
+                <label for="game-winner">Game Winner: </label>
+                    <input type="text" id="game-winner" name="game-winner">
+            </div>
+        </fieldset>
+
         <div class="choice-container flex-row">
             <fieldset class="computer-choice-container flex-col">
                 <legend><strong>Computer's choice for the current round</strong></legend>
@@ -44,7 +58,7 @@
                         <input type="radio" id="scissors" name="human-choice-action" value="scissors">
                 </div>
 
-                <button type="button">Play Round</button>
+                <button type="button" id="play-round-btn">Play Round</button>
             </fieldset>
         </div>
 
