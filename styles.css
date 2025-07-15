@@ -49,7 +49,7 @@ body {
 }
 
 .round-count-container,
-.round-display-container,
+.results-container,
 .choice-container,
 .results-container {
     justify-content: center;

@@ -1,32 +1,39 @@
 // Variables
-let computerChoice, humanChoice, roundCount;
+let humanChoice, computerChoice, roundCount;
+let currentRound = 0;
 let computerScore = humanScore = 0;
 
-let confirmRoundCount = document.querySelector("#round-count-confirm-btn");
+let roundCountBtn = document.querySelector("#round-count-btn");
+let roundCountInput = document.querySelector("#round-count-input");
 
 let playRoundBtn = document.querySelector("#play-round-btn");
+let computerChoiceInput = document.querySelector("#computer-choice");
 let rockRadio = document.querySelector("#rock");
 let paperRadio = document.querySelector("#paper");
 let scissorsRadio = document.querySelector("#scissors");
 
 let roundDisplay = document.querySelector(".current-round");
+let computerScoreText = document.querySelector("#computer-score-text");
+computerScoreText.setAttribute("disabled", "");
+let humanScoreText = document.querySelector("#human-score-text");
+humanScoreText.setAttribute("disabled", "");
+
 let roundWinner = document.querySelector("#round-winner");
 roundWinner.setAttribute("disabled", "");
 let gameWinner = document.querySelector("#game-winner");
 gameWinner.setAttribute("disabled", "");
 
 // Event listeners
-confirmRoundCount.addEventListener("click", (e) => {
-    let roundCountInput = document.querySelector("#round-count-input");
-    roundCount = Number(roundCountInput.textContent);
+roundCountBtn.addEventListener("click", (e) => {
+    roundCount = String(roundCountInput.value);
     
     roundCountInput.setAttribute("disabled", "");
-    confirmRoundCount.setAttribute("disabled", "");
+    roundCountBtn.setAttribute("disabled", "");
 });
 
 playRoundBtn.addEventListener("click", (e) => {
-    for (let currentRound = 1; currentRound <= roundCount; currentRound++) {
-        roundDisplay.textContent = `${currentRound/roundCount}`;
+    currentRound++;
+    roundDisplay.textContent = `${currentRound}/${roundCount}`;
 
     // Get choices
     computerChoice = getComputerChoice();
@@ -38,14 +45,15 @@ playRoundBtn.addEventListener("click", (e) => {
     } else {
         humanChoice = scissorsRadio.value;
     }
-        
+
+    computerChoiceInput.value = computerChoice;
+            
     // Check if draw
     if (humanChoice === "rock" && computerChoice === "rock" ||
         humanChoice === "paper" && computerChoice === "paper" ||
         humanChoice === "scissors" && computerChoice === "scissors"
         ) {
-            roundWinner.textContent = "Draw";
-            continue;
+            roundWinner.value = "Draw";
         }
 
     // Check if computer wins
@@ -53,8 +61,9 @@ playRoundBtn.addEventListener("click", (e) => {
         humanChoice === "paper" && computerChoice === "scissors" ||
         humanChoice === "scissors" && computerChoice === "rock"
         ) {
-            roundWinner.textContent = "Computer wins this round!";
+            roundWinner.value = "Computer wins this round!";
             computerScore++;
+            computerScoreText.value = String(computerScore);
         }
 
     // Check if human wins
@@ -62,13 +71,15 @@ playRoundBtn.addEventListener("click", (e) => {
         humanChoice === "paper" && computerChoice === "rock" ||
         humanChoice === "scissors" && computerChoice === "paper"
         ) {
-            roundWinner.textContent = "You win this round!";
+            roundWinner.value = "You win this round!";
             humanScore++;
+            humanScoreText.value = String(humanScore);
         }
-    }
 
     // Check if match is over
-    calcScore(computerScore, humanScore);
+    if (currentRound >= roundCount) {
+        calcScore(computerScore, humanScore);
+    }
 });
 
 // Functions
@@ -86,10 +97,10 @@ function getComputerChoice(min=1, max=100) {
 
 function calcScore(computerScore, humanScore) {
     if (humanScore > computerScore) {
-        gameWinner.textContent = "You win this game!";
+        gameWinner.value = "You win this game!";
     } else if (computerScore > humanScore) {
-        gameWinner.textContent = "Computer wins this game!";
+        gameWinner.value = "Computer wins this game!";
     } else {
-        gameWinner.textContent = "This game is a draw.";
+        gameWinner.value = "This game is a draw.";
     }
 }

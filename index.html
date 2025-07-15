@@ -13,24 +13,10 @@
 
             <div class="flex-row">
                 <label for="round-count-input">Input desired amount of rounds:</label>
-                    <input type="text" id="round-count-input" name="round-count-input" value="1">
+                    <input type="text" id="round-count-input" name="round-count-input">
             </div>
 
-            <button type="button" id="round-count-confirm-btn">Confirm</button>
-        </fieldset>
-
-        <fieldset class="round-display-container flex-col">
-            <legend><strong>Current Round: </strong></legend>
-            <h2 class="current-round">x/x</h3>
-
-            <div>
-                <label for="round-winner">Round Winner:</label>
-                    <input type="text" id="round-winner" name="round-winner">
-            </div>
-            <div>
-                <label for="game-winner">Game Winner: </label>
-                    <input type="text" id="game-winner" name="game-winner">
-            </div>
+            <button type="button" id="round-count-btn">Confirm</button>
         </fieldset>
 
         <div class="choice-container flex-row">
@@ -44,6 +30,10 @@
                         <input type="radio" id="c-paper" name="computer-choice-action" value="paper" disabled>
                     <label for="c-scissors">Scissors</label>
                         <input type="radio" id="c-scissors" name="computer-choice-action" value="scissors" disabled>
+                </div>
+                <div>
+                    <label for="computer-choice">Computer Choice:</label>
+                        <input type="text" id="computer-choice" name="computer-choice" disabled>
                 </div>
             </fieldset>
             <fieldset class="human-choice-container flex-col">
@@ -64,29 +54,21 @@
 
         <fieldset class="results-container flex-col">
             <legend><strong>Results</strong></legend>
+            <h2 class="current-round">x/x</h3>
 
-            <div class="result flex-row">
-                <label for="human-score">Your Score:</label>
-                    <input type="text" id="human-score" name="human-score" disabled>
+            <div>
+                <label for="computer-score-text">Computer Score:</label>
+                    <input type="text" id="computer-score-text" name="computer-score-text">
+                <label for="human-score-text">Your Score:</label>
+                    <input type="text" id="human-score-text" name="human-score-text">
             </div>
-
-            <div class="result flex-row">
-                <label for="computer-score">Computer Score:</label>
-                    <input type="text" id="computer-score" name="computer-score" disabled>
+            <div>
+                <label for="round-winner">Round Winner:</label>
+                    <input type="text" id="round-winner" name="round-winner">
+                <label for="game-winner">Game Winner: </label>
+                    <input type="text" id="game-winner" name="game-winner">
             </div>
-
-            <div class="result flex-row">
-                <label for="round-result">Round Result:</label>
-                    <input type="text" id="round-result" name="round-result" disabled>
-            </div>
-
-            <div class="result flex-row">
-                <label for="game-result">Game Result:</label>
-                    <input type="text" id="game-result" name="game-result" disabled>
-            </div>
-                
         </fieldset>
-
         <script src="script.js"></script>
     </form>
 </body>

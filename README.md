@@ -84,3 +84,8 @@
     - [x] Add fieldset to show current round and round winner
     - [x] Add round-display-container to styles.css
     - [x] Update current round display and winner
+
+14. Debug files
+    - [x] Fix round winner and round display not working
+    - [x] Fix roundCount not taking value from roundCountInput input element
+    - [] Add label to display computer choice
