@@ -88,4 +88,5 @@
 14. Debug files
     - [x] Fix round winner and round display not working
     - [x] Fix roundCount not taking value from roundCountInput input element
-    - [] Add label to display computer choice
+    - [x] Add label to display computer choice
+    - [x] Remove duplicate fieldset results-container
